@@ -1,0 +1,32 @@
+    <!DOCTYPE html>
+    <html>
+        <head>
+        <title>Test for Compatibility Mode</title>
+        <script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
+        <script>            
+            jQuery(document).ready(function($) {              
+                /* Browser detection patch */
+                /* http://pupunzi.open-lab.com/2012/08/14/jquery-1-8-and-browser-detection/ */
+                jQuery.browser = {};
+                jQuery.browser.mozilla = /mozilla/.test(navigator.userAgent.toLowerCase()) && !/webkit/.test(navigator.userAgent.toLowerCase());
+                jQuery.browser.webkit = /webkit/.test(navigator.userAgent.toLowerCase());
+                jQuery.browser.opera = /opera/.test(navigator.userAgent.toLowerCase());
+                jQuery.browser.msie = /msie/.test(navigator.userAgent.toLowerCase());
+
+                function isCompatibilityMode() {
+                    var IE7BrowserMode = ($.browser.msie && $.browser.version == 7.0);
+                    var IE7DocumentMode = ($.browser.msie && document.documentMode && document.documentMode == 7);
+                    var compatibilityMode = ( IE7BrowserMode || IE7DocumentMode );
+                    alert( "Is IE in Compatibility Mode? " + compatibilityMode );
+                }
+
+                isCompatibilityMode();
+            });
+        </script>
+
+
+    </head>
+    <body>
+        <h1>Hello, world!</h1>
+    </body>
+    </html>
