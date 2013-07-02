@@ -7,4 +7,4 @@ Ran into the need to detect whether or not IE was in Compatibility Mode or not a
 
 This script will return a boolean value anytime the Document Mode for IE is “IE7 standards.”
 
-- See more at: http://melaniededon.com/2013/07/02/detect-ie-compatibility-mode/#sthash.J5V4tWmd.dpuf
+- See more at: http://melaniededon.com/2013/07/02/detect-ie-compatibility-mode/
